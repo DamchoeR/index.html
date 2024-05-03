@@ -1,0 +1,40 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #3488db;
+    padding: 20px;
+    box-shadow: #3488db;
+    border-radius: 10px;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .text {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box:hover {
+    transform: rotate(45deg);
+  }
+  
+  .box.clicked {
+    transform: rotateY(180deg);
+  }
+  
+  .box.clicked .text {
+    display: none;
+  }
+  
+  .box.clicked::before {
+    content: "Transformed!";
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
